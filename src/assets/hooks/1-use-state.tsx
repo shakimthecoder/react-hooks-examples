@@ -3,7 +3,10 @@ import { useState } from 'react';
 export const countExample = () => {
     let count = 0;
 
-    const increaseCount = () => {}
+    const increaseCount = () => {
+        count += 1;
+        console.log(count);
+    }
 
     return (
         <div>
