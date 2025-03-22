@@ -1,4 +1,4 @@
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect } from 'react';
 
 const reducer = (state, action) => {
     switch(action.type){
@@ -25,5 +25,18 @@ export const ReducerExample = () => {
             <button onClick={() => dispatch({ type: "double" })}>++</button>
         </div>
     );
-    
-}
+    }
+    export const secondRefExample = () => {
+        let [count, setCount] = useState<number>(0);
+        const previousCount = useRef(0);
+
+        useEffect(() =>
+
+
+        return (
+            <div>
+                <p>{count}</p>
+                <button onClick={() => ((prev) => prev +1)}>Increment</button>
+            </div>
+        )
+    }
