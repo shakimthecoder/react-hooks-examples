@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const countExample = () => {
+export default function CountExample(): any {
     let count = 0;
 
     const increaseCount = () => {
@@ -16,3 +16,4 @@ export const countExample = () => {
    
     
 }
+
