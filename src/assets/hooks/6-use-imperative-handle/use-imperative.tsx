@@ -1,5 +1,7 @@
 import { useRef, useImperativeHandle } from 'react'; 
 
+
+// Parenr 
 export const ImperativeHandler = () => {
     const inputRef = useRef(null);
     return  (<>
@@ -9,7 +11,7 @@ export const ImperativeHandler = () => {
         </>
     )
 }
-
+// Child Component
 export const CustomInput = forwardRef((props, ref) => {
     const inputRef = useRef<HTMLInputElement>(null);
 
