@@ -26,7 +26,7 @@ export const ReducerExample = () => {
         </div>
     );
     }
-export const secondRefExample = () => {
+export const SecondRefExample = () => {
         let [count, setCount] = useState<number>(0);
         const previousCount = useRef(0);
 
@@ -35,7 +35,8 @@ export const secondRefExample = () => {
         }, [count] );
         return (
             <div>
-                <p>{count}</p>
+                <p>Previous Count: {previousCount.current} </p>
+                <p>Count: {count}</p>
                 <button onClick={() => setCount((prev) => prev +1)}>Increment</button>
             </div>
         )
