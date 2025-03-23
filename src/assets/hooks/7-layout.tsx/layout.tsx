@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const LayoutEffectExample = () => {
+export const LayoutEffectExample = () => {
     const [width, setWidth] = useState(0);
     const boxRef = useRef(null);
 
@@ -10,7 +10,6 @@ const LayoutEffectExample = () => {
         }
     })
     return (
-        <div>
             <div
              ref={boxRef}
              style={{
@@ -18,9 +17,12 @@ const LayoutEffectExample = () => {
                 height: "100px",
                 backgroundColor: "lightblue"
 
-             }}> 
-                <p>The box width is {width}px</p>
+             }}
+             >  Resize me!
+            <div>
+             <p>The width is: {width} px </p>
+             </div>
             </div>
-        </div>
+            
     )
 }
