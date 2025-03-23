@@ -1,10 +1,11 @@
-import { useid } from 'react';
+import { useId } from 'react';
 
 export const useIdExample = () => {
+    const id = useId();
     return (
         <div>
-        <label htmlfor={"input-1"}>Enter your name:</label>
-        <input id={"input-1"} type="text"></input>
+        <label htmlFor={id}>Enter your name:</label>
+        <input id={id} type="text"></input>
         </div>
     )
 }
