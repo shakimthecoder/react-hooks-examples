@@ -4,15 +4,13 @@ export const useTransitionExample = () => {
     const [query, setQuery] = useState("");
     const [filteredItems, setFilteredItems] = useState([]);
     const items = Array.from({ length: 10000 }, (_,i) => `Item ${i + 1}`);
-
     const handleFilter = (e) => {
         const value = e.target.value;
         setQuery(value);
     }
     const filtered: any = items.filter((item) =>
-        item.toLowerCase().includes(value.toLowerCase()));
-        setFilteredItems(filteredItems);
-};
+        item.toLowerCase().includes(item.valueOf()));
+        setFilteredItems(filtered);
     return (
         <div>
         <input 
@@ -22,9 +20,9 @@ export const useTransitionExample = () => {
          placeholder="Search items..."
          >
           <ul>
-            {filteredItems.map((item, index) => {<li key={index}>{item}</li>} )}
-
-
+            {filteredItems.map((item, index) => (<li key={index}>{item}</li> 
+            )}
+            </ul>
          </input>
         </div>
     )
